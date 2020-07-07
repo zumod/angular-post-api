@@ -1,13 +1,13 @@
-var app=angular.module("insert",[]);
+var app = angular.module("insert",[]);
 app.controller("controller", function($scope, $http) {
-    $scope.insert=function(){
+    $scope.insert = function(){
       $http.post(
-        "insertData.php",
-        {'name':$scope.name, 'age':$scope.age, 'email':$scope.email}
-        ).success(function(data){
-            $scope.name=null;
-            $scope.age=null;
-            $scope.email=null;
+          "insertData.php",
+          {'name':$scope.name, 'age':$scope.age, 'email':$scope.email}
+          ).then(function(data){
+            $scope.name = null;
+            $scope.age = null;
+            $scope.email = null;
         });
     }
 });

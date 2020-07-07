@@ -17,6 +17,6 @@
       </div>
   </div>
 
-  <script src="app/controllers/postController.js/"></script>
+  <script src="app/controllers/postController.js"></script>
 </body>
 </html>
