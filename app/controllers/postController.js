@@ -4,10 +4,6 @@ app.controller("controller", function($scope, $http) {
       $http.post(
           "insertData.php",
           {'name':$scope.name, 'age':$scope.age, 'email':$scope.email}
-          ).then(function(data){
-            $scope.name = null;
-            $scope.age = null;
-            $scope.email = null;
-        });
+          );
     }
 });

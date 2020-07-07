@@ -1,6 +1,6 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "post_api");
-$info = json_decode(file_get_contents("php://input"));
+$info = json_decode(file_get_contents("/php://input"));
 if(count($info) > 0)
 {   $name = mysqli_real_escape_string($conn, $info -> name);
     $age = mysqli_real_escape_string($conn, $info -> age);
